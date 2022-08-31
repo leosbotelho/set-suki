@@ -1,0 +1,13 @@
+{
+  "name": "set-suki",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "patchinko": "^4.2.0"
+  },
+  "devDependencies": {
+    "ava": "^4.3.3"
+  }
+}

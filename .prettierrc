@@ -1,0 +1,3 @@
+arrowParens   : avoid
+trailingComma : none
+semi          : false

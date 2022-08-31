@@ -1,0 +1,74 @@
+i = a int b; refers to #i in num ctx
+
+__f: _ _ factor
+b__: b
+_g_: _ get _
+_h_: _ has _
+_s_: _ set _
+_a_  _ add _
+
+Assumptions:
+ . baseline is log n
+ . iteration is linear
+ . 1 + ... + log x = x log x
+
+----------
+has by get:
+----------
+
+a log b < a log b + t log b
+
+ie:
+a bgf
+a bhf + t bgf
+
+obvs for bgf <= bhf
+
+for bgf > bhf:
+
+a bgf < a bhf + t bgf
+(a - t) bgf < a bhf
+(1 - t/a) < bhf / bgf
+
+
+union, kv : t = a; true
+sub, symm : t = a - i; t = a given i = 0
+int       : t = i
+
+---
+int:
+---
+
+cur: ihf < bhf; a ihf <= S
+
+new:
+  composite:
+    cur a has: (a + i) log i <= a bhf + S
+
+  simple:
+    cur a has: (a + i) log i < a bhf
+                             <= S
+
+    new a has: (a + i) log i + b (ahf + 1b) < a bhf
+                                            <= S
+
+
+1b = new b it
+
+S = sum { raf 1 + ... + raf i | r in rs }
+
+r   : result
+add : add or set
+
+--------
+int side:
+--------
+
+b (ahf - 1a) + Ea < a (bhf - 1b) + Eb
+
+
+Ea = 0: no has on int
+
+Ea > 0:
+ cur int: Ea = a (bhf - ihf)
+ new int: Ea = a (bhf - log i) + i log i
